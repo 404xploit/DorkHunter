@@ -1,110 +1,101 @@
-
-
-# DorkHunter - Google Dork Platform for Bug Bounty
+# 🔍 DorkHunter - Google Dork Platform for Bug Bounty
 
 <img src="https://github.com/404xploit/DorkHunter/blob/main/DorkHunter.png?raw=true" width="400" alt="DorkHunter Logo" />
 
-**DorkHunter** is a powerful local web platform built with **TypeScript**, designed for **bug bounty hunters** and **security researchers** to efficiently uncover potential vulnerabilities using **Google Dork** queries.
+A powerful local web platform for security researchers to discover vulnerabilities using Google Dork queries.
 
 ---
 
-## 🚀 Features
+## ✨ Features
 
-* **📚 12,000+ Google Dorks**
-  Access a growing catalog of **12,847+ pre-built Google Dork queries**.
+### 🗃️ Extensive Dork Database
+- **12,847+ pre-built Google Dork queries** (and growing!)
+- Categorized by vulnerability type and target
 
-* **🔍 Search & Results Management**
+### 🔎 Smart Search Tools
+- Save and organize custom dork queries
+- Import and analyze search results
+- Live search with instant feedback
 
-  * Save and organize your custom dork queries
-  * Import and analyze search result links
+### 🎯 Bug Bounty Optimized
+- Specialized dorks for:
+  - HackerOne disclosed reports
+  - Sensitive file exposure
+  - Admin panel discovery
+  - Common CVEs and misconfigurations
 
-* **📊 Personal Dashboard**
-  Track your searches and saved queries in a clean, centralized interface.
-
-* **⚡ Live Search Mode**
-  Test queries in real-time with instant feedback.
-
-* **🎯 Bug Bounty Focus**
-  Includes dorks optimized for:
-
-  * HackerOne disclosed reports
-  * Sensitive file leaks
-  * Admin panel exposure
-  * Misconfigurations and common CVEs
+### 📊 Personal Dashboard
+- Track your search history
+- Manage saved queries
+- Visualize your findings
 
 ---
 
-## 🧪 Example Dork Queries
+
 
 <img src="https://github.com/404xploit/DorkHunter/blob/main/DorkHunter2.png?raw=true" width="1000" alt="Main Interface" />
 
-Sample Google Dorks:
-
-* `intitle:"Index of" admin`
-* `filetype:sql password`
-* `inurl:wp-content/uploads site:*.edu`
-* `"HackerOne disclosed report" site:hackerone.com`
-
 ---
 
-## 🛠 Getting Started
+## 🚀 Quick Start
 
-### 1. Clone the repository
+### Prerequisites
+- Node.js (v14+ recommended)
+- npm (comes with Node.js)
 
+### Installation
 ```bash
 git clone https://github.com/404xploit/DorkHunter.git
 cd DorkHunter
-```
-
-### 2. Install dependencies
-
-Make sure you have **Node.js** and **npm** installed.
-
-```bash
 npm install
 ```
 
-### 3. Configure environment (if required)
-
-If the project uses a `.env` file or config, set it up as needed (see example or documentation).
-
-### 4. Run the app locally
-
+### Running the Application
 ```bash
 npm run dev
 ```
-
-Then open your browser and go to:
-
+Then open your browser to:
 ```
 http://localhost:3000
 ```
 
-> The app will run locally as a web platform. All search features are available via your browser.
+---
+
+## 🧠 Example Dork Queries
+
+```plaintext
+intitle:"Index of" admin
+filetype:sql password
+inurl:wp-content/uploads site:*.edu
+"HackerOne disclosed report" site:hackerone.com
+```
 
 ---
 
-## 🤝 Contribution
+## 🤝 How to Contribute
 
-Contributions are welcome to improve DorkHunter!
-You can help by submitting pull requests that include:
+We welcome contributions! Here's how you can help:
 
-* ✅ New Google Dork queries
-* 🎨 UI/UX improvements
-* 🐞 Bug fixes
-* 📈 Performance or feature enhancements
-
----
-
-## 📄 License
-
-This project is licensed under the **MIT License**.
-See the [LICENSE](LICENSE) file for more information.
+1. **Add New Dorks** (submit your best Google Dork queries)
+2. **Improve UI/UX** (make it prettier or more intuitive)
+3. **Fix Bugs** (help squash those pesky issues)
+4. **Enhance Features** (got a cool idea? share it!)
 
 ---
 
-## ⚠️ Disclaimer
+## ⚠️ Important Disclaimer
 
-**DorkHunter is intended for ethical hacking, legal security research, and bug bounty hunting only.**
-Always obtain **explicit permission** before testing any system or domain.
+**⚠️ Use Responsibly**  
+This tool is intended for:
+- Ethical hacking
+- Legal security research
+- Bug bounty programs
 
+**Always obtain proper authorization** before testing any system or domain.
+
+---
+
+## 💙 Credits
+
+Created by [404xploit](https://github.com/404xploit)  
+If you find this useful, consider starring ⭐ the repo!
