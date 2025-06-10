@@ -1,6 +1,6 @@
 # DonkHunter - Google Dork Platform for Bug Bounty
 
-imagem1 
+![Interface Principal](https://github.com/404xploit/DorkHunter/blob/main/DorkHunter2.png?raw=true)
 
 DonkHunter is a powerful platform designed for bug bounty hunters and security researchers to efficiently search for vulnerabilities using Google Dork queries.
 
@@ -41,8 +41,8 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ## Screenshots
 
-![Search Interface](imagem2)
-![Dashboard View](imagem3)
+
+
 
 ## Disclaimer
 
