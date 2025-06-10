@@ -33,7 +33,7 @@ A powerful local web platform for security researchers to discover vulnerabiliti
 
 
 
-<img src="https://github.com/404xploit/DorkHunter/blob/main/DorkHunter2.png?raw=true" width="1000" alt="Main Interface" />
+<img src="https://github.com/404xploit/DorkHunter/blob/main/DorkHunter2.png?raw=true" width="1400" alt="Main Interface" />
 
 ---
 
