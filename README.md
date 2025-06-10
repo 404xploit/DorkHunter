@@ -4,12 +4,17 @@
 
 A powerful local web platform for security researchers to discover vulnerabilities using Google Dork queries.
 
+
+[![Node.js](https://img.shields.io/badge/node.js-14%2B-brightgreen?style=flat-square&logo=node.js)](https://nodejs.org/)
+[![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+[![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+
 ---
 
 ## ✨ Features
 
-### 🗃️ Extensive Dork Database
-- **12,847+ pre-built Google Dork queries** (and growing!)
+### Extensive Dork Database
+- **100+ pre-built Google Dork queries** (and growing!)
 - Categorized by vulnerability type and target
 
 ### 🔎 Smart Search Tools
@@ -24,7 +29,7 @@ A powerful local web platform for security researchers to discover vulnerabiliti
   - Admin panel discovery
   - Common CVEs and misconfigurations
 
-### 📊 Personal Dashboard
+### Personal Dashboard
 - Track your search history
 - Manage saved queries
 - Visualize your findings
@@ -37,7 +42,7 @@ A powerful local web platform for security researchers to discover vulnerabiliti
 
 ---
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Prerequisites
 - Node.js (v14+ recommended)
@@ -80,18 +85,6 @@ We welcome contributions! Here's how you can help:
 2. **Improve UI/UX** (make it prettier or more intuitive)
 3. **Fix Bugs** (help squash those pesky issues)
 4. **Enhance Features** (got a cool idea? share it!)
-
----
-
-## ⚠️ Important Disclaimer
-
-**⚠️ Use Responsibly**  
-This tool is intended for:
-- Ethical hacking
-- Legal security research
-- Bug bounty programs
-
-**Always obtain proper authorization** before testing any system or domain.
 
 ---
 
