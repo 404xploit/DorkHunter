@@ -91,4 +91,3 @@ We welcome contributions! Here's how you can help:
 ## 💙 Credits
 
 Created by [404xploit](https://github.com/404xploit)  
-If you find this useful, consider starring ⭐ the repo!
