@@ -1,0 +1,58 @@
+[
+  {
+    "id": "132",
+    "query": "inurl:\"/grafana/\" intitle:\"Grafana\"",
+    "description": "Exposed Grafana instances",
+    "category": "monitoring",
+    "platform": [
+      "grafana"
+    ],
+    "assetType": "server",
+    "noiseLevel": "low",
+    "tags": [
+      "grafana",
+      "monitoring",
+      "dashboard"
+    ],
+    "examples": [
+      "inurl:\"/login\" intitle:\"Grafana\""
+    ]
+  },
+  {
+    "id": "133",
+    "query": "inurl:\"/kibana/\" intitle:\"Kibana\"",
+    "description": "Exposed Kibana instances",
+    "category": "monitoring",
+    "platform": [
+      "kibana"
+    ],
+    "assetType": "server",
+    "noiseLevel": "low",
+    "tags": [
+      "kibana",
+      "monitoring",
+      "elasticsearch"
+    ],
+    "examples": [
+      "inurl:\"/app/kibana\" intitle:\"Kibana\""
+    ]
+  },
+  {
+    "id": "134",
+    "query": "inurl:\"/prometheus/\" intitle:\"Prometheus\"",
+    "description": "Exposed Prometheus instances",
+    "category": "monitoring",
+    "platform": [
+      "prometheus"
+    ],
+    "assetType": "server",
+    "noiseLevel": "low",
+    "tags": [
+      "prometheus",
+      "monitoring"
+    ],
+    "examples": [
+      "inurl:\"/graph\" intitle:\"Prometheus Time Series Collection and Processing Server\""
+    ]
+  }
+]

@@ -1,0 +1,21 @@
+[
+  {
+    "id": "128",
+    "query": "inurl:\"/jira/\" intitle:\"Jira\"",
+    "description": "Exposed Jira instances",
+    "category": "project-management",
+    "platform": [
+      "jira"
+    ],
+    "assetType": "server",
+    "noiseLevel": "low",
+    "tags": [
+      "jira",
+      "project-management",
+      "atlassian"
+    ],
+    "examples": [
+      "inurl:\"/secure/Dashboard.jspa\" intitle:\"Jira\""
+    ]
+  }
+]

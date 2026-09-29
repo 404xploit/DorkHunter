@@ -1,0 +1,310 @@
+[
+  {
+    "id": "6",
+    "query": "filetype:env \"DB_PASSWORD\"",
+    "description": "Environment files with database credentials",
+    "category": "config-files",
+    "platform": [
+      "generic"
+    ],
+    "assetType": "file",
+    "noiseLevel": "low",
+    "tags": [
+      "env",
+      "database",
+      "credentials"
+    ],
+    "examples": [
+      "filetype:env \"DATABASE_URL\"",
+      "filetype:env \"JWT_SECRET\""
+    ]
+  },
+  {
+    "id": "18",
+    "query": "inurl:\"/phpinfo.php\"",
+    "description": "PHP info pages exposing server configuration",
+    "category": "config-files",
+    "platform": [
+      "generic"
+    ],
+    "assetType": "file",
+    "noiseLevel": "low",
+    "tags": [
+      "phpinfo",
+      "config",
+      "server"
+    ],
+    "examples": [
+      "inurl:\"/info.php\"",
+      "inurl:\"/test.php\" intitle:\"phpinfo()\""
+    ]
+  },
+  {
+    "id": "20",
+    "query": "inurl:\"/config.php\" OR inurl:\"/settings.php\" intext:\"DB_HOST\"",
+    "description": "Configuration files with database connection details",
+    "category": "config-files",
+    "platform": [
+      "generic"
+    ],
+    "assetType": "file",
+    "noiseLevel": "low",
+    "tags": [
+      "config",
+      "settings",
+      "database"
+    ],
+    "examples": [
+      "inurl:\"/config.php\" intext:\"DB_USER\"",
+      "inurl:\"/settings.php\" intext:\"DB_NAME\""
+    ]
+  },
+  {
+    "id": "23",
+    "query": "inurl:\"/vendor/\" intext:\"composer.json\"",
+    "description": "Exposed Composer vendor directories",
+    "category": "config-files",
+    "platform": [
+      "generic"
+    ],
+    "assetType": "file",
+    "noiseLevel": "low",
+    "tags": [
+      "composer",
+      "vendor",
+      "php"
+    ],
+    "examples": [
+      "inurl:\"/vendor/composer/installed.json\""
+    ]
+  },
+  {
+    "id": "24",
+    "query": "inurl:\"/node_modules/\" intext:\"package.json\"",
+    "description": "Exposed Node.js node_modules directories",
+    "category": "config-files",
+    "platform": [
+      "generic"
+    ],
+    "assetType": "file",
+    "noiseLevel": "low",
+    "tags": [
+      "nodejs",
+      "node_modules",
+      "package.json"
+    ],
+    "examples": [
+      "inurl:\"/node_modules/express/package.json\""
+    ]
+  },
+  {
+    "id": "26",
+    "query": "inurl:\"/crossdomain.xml\" filetype:xml",
+    "description": "Cross-domain policy files",
+    "category": "config-files",
+    "platform": [
+      "generic"
+    ],
+    "assetType": "file",
+    "noiseLevel": "low",
+    "tags": [
+      "crossdomain",
+      "xml",
+      "flash"
+    ],
+    "examples": [
+      "inurl:\"/clientaccesspolicy.xml\""
+    ]
+  },
+  {
+    "id": "94",
+    "query": "inurl:\"/test.php\" intext:\"phpinfo()\"",
+    "description": "Test PHP info pages",
+    "category": "config-files",
+    "platform": [
+      "generic"
+    ],
+    "assetType": "file",
+    "noiseLevel": "low",
+    "tags": [
+      "phpinfo",
+      "test",
+      "config"
+    ],
+    "examples": [
+      "inurl:\"/info.php\" intext:\"PHP Version\""
+    ]
+  },
+  {
+    "id": "100",
+    "query": "inurl:\"/config.bak\" OR inurl:\"/config.old\"",
+    "description": "Backup configuration files",
+    "category": "config-files",
+    "platform": [
+      "generic"
+    ],
+    "assetType": "file",
+    "noiseLevel": "low",
+    "tags": [
+      "config",
+      "backup"
+    ],
+    "examples": [
+      "inurl:\"/settings.bak\""
+    ]
+  },
+  {
+    "id": "102",
+    "query": "inurl:\"/php.ini.bak\" OR inurl:\"/php.ini.old\"",
+    "description": "Backup PHP configuration files",
+    "category": "config-files",
+    "platform": [
+      "generic"
+    ],
+    "assetType": "file",
+    "noiseLevel": "low",
+    "tags": [
+      "php",
+      "config",
+      "backup"
+    ],
+    "examples": [
+      "inurl:\"/php.ini.orig\""
+    ]
+  },
+  {
+    "id": "114",
+    "query": "inurl:\"/.env\" filetype:env",
+    "description": "Exposed .env files",
+    "category": "config-files",
+    "platform": [
+      "generic"
+    ],
+    "assetType": "file",
+    "noiseLevel": "low",
+    "tags": [
+      "env",
+      "config",
+      "credentials"
+    ],
+    "examples": [
+      "inurl:\"/.env.example\" filetype:env"
+    ]
+  },
+  {
+    "id": "118",
+    "query": "inurl:\"/WEB-INF/web.xml\"",
+    "description": "Exposed Java web application deployment descriptors",
+    "category": "config-files",
+    "platform": [
+      "generic"
+    ],
+    "assetType": "file",
+    "noiseLevel": "low",
+    "tags": [
+      "java",
+      "web.xml",
+      "config"
+    ],
+    "examples": [
+      "inurl:\"/WEB-INF/applicationContext.xml\""
+    ]
+  },
+  {
+    "id": "135",
+    "query": "inurl:\"/phpinfo.php\" intext:\"PHP Version\"",
+    "description": "PHP info pages exposing server configuration",
+    "category": "config-files",
+    "platform": [
+      "generic"
+    ],
+    "assetType": "file",
+    "noiseLevel": "low",
+    "tags": [
+      "phpinfo",
+      "config",
+      "server"
+    ],
+    "examples": [
+      "inurl:\"/info.php\" intitle:\"phpinfo()\""
+    ]
+  },
+  {
+    "id": "137",
+    "query": "inurl:\"/config.php.bak\" OR inurl:\"/settings.php.bak\"",
+    "description": "Backup configuration files with database connection details",
+    "category": "config-files",
+    "platform": [
+      "generic"
+    ],
+    "assetType": "file",
+    "noiseLevel": "low",
+    "tags": [
+      "config",
+      "settings",
+      "backup",
+      "database"
+    ],
+    "examples": [
+      "inurl:\"/config.php.old\"",
+      "inurl:\"/settings.php.old\""
+    ]
+  },
+  {
+    "id": "182",
+    "query": "filetype:tfstate \"access_key\" OR \"secret_key\"",
+    "description": "Terraform state files containing cloud credentials",
+    "category": "config-files",
+    "platform": [
+      "generic"
+    ],
+    "assetType": "file",
+    "noiseLevel": "low",
+    "tags": [
+      "terraform",
+      "tfstate",
+      "credentials"
+    ],
+    "examples": [
+      "filetype:tfstate \"aws_access_key_id\""
+    ]
+  },
+  {
+    "id": "183",
+    "query": "inurl:\"/actuator/env\" OR inurl:\"/actuator/configprops\"",
+    "description": "Exposed Spring Boot Actuator configuration endpoints",
+    "category": "config-files",
+    "platform": [
+      "generic"
+    ],
+    "assetType": "endpoint",
+    "noiseLevel": "low",
+    "tags": [
+      "spring-boot",
+      "actuator",
+      "configuration"
+    ],
+    "examples": [
+      "inurl:\"/actuator/beans\" intitle:\"Whitelabel Error Page\""
+    ]
+  },
+  {
+    "id": "191",
+    "query": "filetype:yaml \"kind: Secret\" \"apiVersion: v1\"",
+    "description": "Kubernetes Secret manifests indexed as YAML",
+    "category": "config-files",
+    "platform": [
+      "kubernetes"
+    ],
+    "assetType": "file",
+    "noiseLevel": "low",
+    "tags": [
+      "kubernetes",
+      "secret",
+      "yaml"
+    ],
+    "examples": [
+      "filetype:yml \"kind: Secret\" \"stringData:\""
+    ]
+  }
+]

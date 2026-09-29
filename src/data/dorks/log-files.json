@@ -1,0 +1,40 @@
+[
+  {
+    "id": "17",
+    "query": "filetype:log intext:\"password\"",
+    "description": "Log files containing passwords",
+    "category": "log-files",
+    "platform": [
+      "generic"
+    ],
+    "assetType": "file",
+    "noiseLevel": "low",
+    "tags": [
+      "log",
+      "password"
+    ],
+    "examples": [
+      "filetype:log intext:\"user:password\"",
+      "filetype:log intext:\"login_credentials\""
+    ]
+  },
+  {
+    "id": "101",
+    "query": "inurl:\"/error_log\" filetype:log",
+    "description": "Apache error logs",
+    "category": "log-files",
+    "platform": [
+      "generic"
+    ],
+    "assetType": "file",
+    "noiseLevel": "medium",
+    "tags": [
+      "error",
+      "log",
+      "apache"
+    ],
+    "examples": [
+      "inurl:\"/access_log\" filetype:log"
+    ]
+  }
+]

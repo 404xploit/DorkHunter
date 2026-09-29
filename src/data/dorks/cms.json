@@ -1,0 +1,21 @@
+[
+  {
+    "id": "74",
+    "query": "inurl:\"/drupal/\" intext:\"Powered by Drupal\"",
+    "description": "Drupal installations",
+    "category": "cms",
+    "platform": [
+      "drupal"
+    ],
+    "assetType": "website",
+    "noiseLevel": "medium",
+    "tags": [
+      "drupal",
+      "cms",
+      "powered-by"
+    ],
+    "examples": [
+      "inurl:\"/user/login\" intext:\"Drupal\""
+    ]
+  }
+]

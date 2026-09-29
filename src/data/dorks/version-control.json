@@ -1,0 +1,21 @@
+[
+  {
+    "id": "116",
+    "query": "inurl:\"/.svn/wc.db\"",
+    "description": "Exposed SVN working copy databases",
+    "category": "version-control",
+    "platform": [
+      "generic"
+    ],
+    "assetType": "database",
+    "noiseLevel": "low",
+    "tags": [
+      "svn",
+      "database",
+      "version-control"
+    ],
+    "examples": [
+      "inurl:\"/.svn/entries\""
+    ]
+  }
+]

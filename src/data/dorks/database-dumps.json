@@ -1,0 +1,61 @@
+[
+  {
+    "id": "3",
+    "query": "filetype:sql \"CREATE TABLE\" password",
+    "description": "SQL dump files containing password tables",
+    "category": "database-dumps",
+    "platform": [
+      "generic"
+    ],
+    "assetType": "database",
+    "noiseLevel": "low",
+    "tags": [
+      "sql",
+      "password",
+      "database",
+      "dump"
+    ],
+    "examples": [
+      "filetype:sql \"INSERT INTO users\"",
+      "filetype:sql \"password\" \"email\""
+    ]
+  },
+  {
+    "id": "98",
+    "query": "inurl:\"/backup/\" filetype:sql",
+    "description": "SQL backup files",
+    "category": "database-dumps",
+    "platform": [
+      "generic"
+    ],
+    "assetType": "database",
+    "noiseLevel": "low",
+    "tags": [
+      "sql",
+      "backup",
+      "database"
+    ],
+    "examples": [
+      "inurl:\"/db_backup/\" filetype:sql"
+    ]
+  },
+  {
+    "id": "99",
+    "query": "inurl:\"/dump.sql\" OR inurl:\"/database.sql\"",
+    "description": "Common SQL dump file names",
+    "category": "database-dumps",
+    "platform": [
+      "generic"
+    ],
+    "assetType": "database",
+    "noiseLevel": "low",
+    "tags": [
+      "sql",
+      "dump",
+      "database"
+    ],
+    "examples": [
+      "inurl:\"/backup/dump.sql\""
+    ]
+  }
+]

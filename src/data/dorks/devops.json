@@ -1,0 +1,97 @@
+[
+  {
+    "id": "126",
+    "query": "inurl:\"/jenkins/\" intitle:\"Jenkins\"",
+    "description": "Exposed Jenkins CI/CD servers",
+    "category": "devops",
+    "platform": [
+      "jenkins"
+    ],
+    "assetType": "server",
+    "noiseLevel": "low",
+    "tags": [
+      "jenkins",
+      "ci-cd",
+      "devops"
+    ],
+    "examples": [
+      "inurl:\"/jenkins/login\""
+    ]
+  },
+  {
+    "id": "127",
+    "query": "inurl:\"/gitlab/\" intitle:\"GitLab\"",
+    "description": "Exposed GitLab servers",
+    "category": "devops",
+    "platform": [
+      "gitlab"
+    ],
+    "assetType": "server",
+    "noiseLevel": "low",
+    "tags": [
+      "gitlab",
+      "git",
+      "devops"
+    ],
+    "examples": [
+      "inurl:\"/users/sign_in\" intitle:\"GitLab\""
+    ]
+  },
+  {
+    "id": "130",
+    "query": "inurl:\"/nexus/\" intitle:\"Nexus Repository Manager\"",
+    "description": "Exposed Nexus Repository Manager instances",
+    "category": "devops",
+    "platform": [
+      "nexus"
+    ],
+    "assetType": "server",
+    "noiseLevel": "low",
+    "tags": [
+      "nexus",
+      "repository",
+      "devops"
+    ],
+    "examples": [
+      "inurl:\"/#browse/welcome\" intitle:\"Nexus Repository Manager\""
+    ]
+  },
+  {
+    "id": "131",
+    "query": "inurl:\"/artifactory/\" intitle:\"Artifactory\"",
+    "description": "Exposed Artifactory instances",
+    "category": "devops",
+    "platform": [
+      "artifactory"
+    ],
+    "assetType": "server",
+    "noiseLevel": "low",
+    "tags": [
+      "artifactory",
+      "repository",
+      "devops"
+    ],
+    "examples": [
+      "inurl:\"/ui/login\" intitle:\"Artifactory\""
+    ]
+  },
+  {
+    "id": "186",
+    "query": "inurl:\"/v2/_catalog\" intitle:\"Docker Registry\"",
+    "description": "Exposed Docker Registry catalog endpoints",
+    "category": "devops",
+    "platform": [
+      "docker"
+    ],
+    "assetType": "endpoint",
+    "noiseLevel": "low",
+    "tags": [
+      "docker",
+      "registry",
+      "catalog"
+    ],
+    "examples": [
+      "inurl:\"/v2/\" \"Docker-Distribution-Api-Version\""
+    ]
+  }
+]

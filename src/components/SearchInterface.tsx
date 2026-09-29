@@ -1,6 +1,12 @@
 import React, { useState } from 'react';
 import { Search, Filter, Play, Save, Download } from 'lucide-react';
-import { FilterState } from '../types';
+import {
+  ASSET_TYPES,
+  DORK_CATEGORIES,
+  DORK_PLATFORMS,
+  NOISE_LEVELS,
+  type FilterState,
+} from '../types';
 
 interface SearchInterfaceProps {
   onSearch: (query: string, filters: FilterState) => void;
@@ -10,12 +16,33 @@ interface SearchInterfaceProps {
   resultCount: number;
 }
 
+const labels: Record<string, string> = {
+  api: 'API',
+  cms: 'CMS',
+  gcp: 'GCP',
+  gitlab: 'GitLab',
+  intigriti: 'Intigriti',
+  jboss: 'JBoss',
+  jira: 'Jira',
+  nodejs: 'Node.js',
+  wordpress: 'WordPress',
+  yeswehack: 'YesWeHack',
+};
+
+const formatLabel = (value: string) => value
+  .split('-')
+  .map((part) => labels[part] ?? `${part.charAt(0).toUpperCase()}${part.slice(1)}`)
+  .join(' ');
+
+const selectedValues = <T extends string>(event: React.ChangeEvent<HTMLSelectElement>): T[] =>
+  Array.from(event.target.selectedOptions, (option) => option.value as T);
+
 export const SearchInterface: React.FC<SearchInterfaceProps> = ({
   onSearch,
   onSaveQuery,
   onExport,
   isSearching,
-  resultCount
+  resultCount,
 }) => {
   const [query, setQuery] = useState('');
   const [showFilters, setShowFilters] = useState(false);
@@ -24,7 +51,7 @@ export const SearchInterface: React.FC<SearchInterfaceProps> = ({
     platforms: [],
     assetTypes: [],
     noiseLevel: [],
-    searchTerm: ''
+    searchTerm: '',
   });
 
   const handleSearch = () => {
@@ -33,39 +60,38 @@ export const SearchInterface: React.FC<SearchInterfaceProps> = ({
 
   const handleSaveQuery = () => {
     const name = prompt('Enter a name for this query:');
-    if (name) {
-      onSaveQuery(name, query);
-    }
+    if (name) onSaveQuery(name, query);
   };
 
   return (
     <div className="bg-slate-800/50 rounded-xl p-6 border border-slate-700/50">
       <div className="space-y-4">
-        {/* Main Search Bar */}
         <div className="flex space-x-3">
           <div className="flex-1 relative">
             <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-slate-400" />
             <input
               type="text"
               value={query}
-              onChange={(e) => setQuery(e.target.value)}
-              onKeyDown={(e) => e.key === 'Enter' && handleSearch()}
+              onChange={(event) => setQuery(event.target.value)}
+              onKeyDown={(event) => event.key === 'Enter' && handleSearch()}
               placeholder="Enter Google Dork query or search existing dorks..."
               className="w-full pl-10 pr-4 py-3 bg-slate-900/50 border border-slate-600 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
             />
           </div>
-          
+
           <button
             onClick={() => setShowFilters(!showFilters)}
+            aria-label="Toggle search filters"
+            aria-expanded={showFilters}
             className={`px-4 py-3 rounded-lg border transition-colors ${
-              showFilters 
-                ? 'bg-blue-600 border-blue-500 text-white' 
+              showFilters
+                ? 'bg-blue-600 border-blue-500 text-white'
                 : 'bg-slate-900/50 border-slate-600 text-slate-300 hover:bg-slate-700'
             }`}
           >
             <Filter className="h-5 w-5" />
           </button>
-          
+
           <button
             onClick={handleSearch}
             disabled={isSearching || !query.trim()}
@@ -76,7 +102,6 @@ export const SearchInterface: React.FC<SearchInterfaceProps> = ({
           </button>
         </div>
 
-        {/* Action Buttons */}
         <div className="flex justify-between items-center">
           <div className="flex space-x-3">
             <button
@@ -87,7 +112,7 @@ export const SearchInterface: React.FC<SearchInterfaceProps> = ({
               <Save className="h-4 w-4" />
               <span>Save Query</span>
             </button>
-            
+
             <button
               onClick={onExport}
               disabled={resultCount === 0}
@@ -97,7 +122,7 @@ export const SearchInterface: React.FC<SearchInterfaceProps> = ({
               <span>Export Results</span>
             </button>
           </div>
-          
+
           {resultCount > 0 && (
             <div className="text-sm text-slate-400">
               Found <span className="text-white font-medium">{resultCount}</span> results
@@ -105,81 +130,82 @@ export const SearchInterface: React.FC<SearchInterfaceProps> = ({
           )}
         </div>
 
-        {/* Filters Panel */}
         {showFilters && (
           <div className="border-t border-slate-700 pt-4 space-y-4">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
               <div>
-                <label className="block text-sm font-medium text-slate-300 mb-2">Categories</label>
+                <label htmlFor="category-filter" className="block text-sm font-medium text-slate-300 mb-2">
+                  Categories
+                </label>
                 <select
+                  id="category-filter"
                   multiple
                   className="w-full p-2 bg-slate-900/50 border border-slate-600 rounded-lg text-white text-sm"
-                  onChange={(e) => {
-                    const selected = Array.from(e.target.selectedOptions, option => option.value);
-                    setFilters(prev => ({ ...prev, categories: selected as any }));
-                  }}
+                  onChange={(event) => setFilters((previous) => ({
+                    ...previous,
+                    categories: selectedValues<FilterState['categories'][number]>(event),
+                  }))}
                 >
-                  <option value="admin-panels">Admin Panels</option>
-                  <option value="exposed-files">Exposed Files</option>
-                  <option value="database-dumps">Database Dumps</option>
-                  <option value="config-files">Config Files</option>
-                  <option value="git-repositories">Git Repositories</option>
-                  <option value="cloud-storage">Cloud Storage</option>
-                  <option value="api-endpoints">API Endpoints</option>
+                  {DORK_CATEGORIES.map((category) => (
+                    <option key={category} value={category}>{formatLabel(category)}</option>
+                  ))}
                 </select>
               </div>
-              
+
               <div>
-                <label className="block text-sm font-medium text-slate-300 mb-2">Platforms</label>
+                <label htmlFor="platform-filter" className="block text-sm font-medium text-slate-300 mb-2">
+                  Platforms
+                </label>
                 <select
+                  id="platform-filter"
                   multiple
                   className="w-full p-2 bg-slate-900/50 border border-slate-600 rounded-lg text-white text-sm"
-                  onChange={(e) => {
-                    const selected = Array.from(e.target.selectedOptions, option => option.value);
-                    setFilters(prev => ({ ...prev, platforms: selected as any }));
-                  }}
+                  onChange={(event) => setFilters((previous) => ({
+                    ...previous,
+                    platforms: selectedValues<FilterState['platforms'][number]>(event),
+                  }))}
                 >
-                  <option value="hackerone">HackerOne</option>
-                  <option value="bugcrowd">Bugcrowd</option>
-                  <option value="yeswehack">YesWeHack</option>
-                  <option value="synack">Synack</option>
-                  <option value="generic">Generic</option>
+                  {DORK_PLATFORMS.map((platform) => (
+                    <option key={platform} value={platform}>{formatLabel(platform)}</option>
+                  ))}
                 </select>
               </div>
-              
+
               <div>
-                <label className="block text-sm font-medium text-slate-300 mb-2">Asset Type</label>
+                <label htmlFor="asset-filter" className="block text-sm font-medium text-slate-300 mb-2">
+                  Asset Type
+                </label>
                 <select
+                  id="asset-filter"
                   multiple
                   className="w-full p-2 bg-slate-900/50 border border-slate-600 rounded-lg text-white text-sm"
-                  onChange={(e) => {
-                    const selected = Array.from(e.target.selectedOptions, option => option.value);
-                    setFilters(prev => ({ ...prev, assetTypes: selected as any }));
-                  }}
+                  onChange={(event) => setFilters((previous) => ({
+                    ...previous,
+                    assetTypes: selectedValues<FilterState['assetTypes'][number]>(event),
+                  }))}
                 >
-                  <option value="subdomain">Subdomain</option>
-                  <option value="file">File</option>
-                  <option value="repository">Repository</option>
-                  <option value="endpoint">Endpoint</option>
-                  <option value="database">Database</option>
-                  <option value="storage">Storage</option>
-                  <option value="panel">Panel</option>
+                  {ASSET_TYPES.map((assetType) => (
+                    <option key={assetType} value={assetType}>{formatLabel(assetType)}</option>
+                  ))}
                 </select>
               </div>
-              
+
               <div>
-                <label className="block text-sm font-medium text-slate-300 mb-2">Noise Level</label>
+                <label htmlFor="noise-filter" className="block text-sm font-medium text-slate-300 mb-2">
+                  Noise Level
+                </label>
                 <select
+                  id="noise-filter"
                   multiple
                   className="w-full p-2 bg-slate-900/50 border border-slate-600 rounded-lg text-white text-sm"
-                  onChange={(e) => {
-                    const selected = Array.from(e.target.selectedOptions, option => option.value);
-                    setFilters(prev => ({ ...prev, noiseLevel: selected as any }));
-                  }}
+                  onChange={(event) => setFilters((previous) => ({
+                    ...previous,
+                    noiseLevel: selectedValues<FilterState['noiseLevel'][number]>(event),
+                  }))}
                 >
-                  <option value="low">Low</option>
-                  <option value="medium">Medium</option>
-                  <option value="high">High</option>
+                  {NOISE_LEVELS.map((noiseLevel) => (
+                    <option key={noiseLevel} value={noiseLevel}>{formatLabel(noiseLevel)}</option>
+                  ))}
                 </select>
               </div>
             </div>

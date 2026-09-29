@@ -1,0 +1,41 @@
+[
+  {
+    "id": "1",
+    "query": "site:hackerone.com inurl:reports",
+    "description": "Find HackerOne disclosed reports",
+    "category": "development",
+    "platform": [
+      "hackerone"
+    ],
+    "assetType": "documentation",
+    "noiseLevel": "low",
+    "tags": [
+      "reports",
+      "disclosure",
+      "hackerone"
+    ],
+    "examples": [
+      "site:hackerone.com/reports inurl:disclosed"
+    ]
+  },
+  {
+    "id": "11",
+    "query": "site:bugcrowd.com inurl:\"/programs/\"",
+    "description": "Bugcrowd program pages and scopes",
+    "category": "development",
+    "platform": [
+      "bugcrowd"
+    ],
+    "assetType": "documentation",
+    "noiseLevel": "low",
+    "tags": [
+      "bugcrowd",
+      "programs",
+      "scope"
+    ],
+    "examples": [
+      "site:bugcrowd.com inurl:program",
+      "site:bugcrowd.com \"scope\""
+    ]
+  }
+]

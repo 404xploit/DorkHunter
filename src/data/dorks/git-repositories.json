@@ -1,0 +1,61 @@
+[
+  {
+    "id": "4",
+    "query": "site:github.com \"api_key\" OR \"secret_key\"",
+    "description": "API keys exposed in GitHub repositories",
+    "category": "git-repositories",
+    "platform": [
+      "generic"
+    ],
+    "assetType": "repository",
+    "noiseLevel": "medium",
+    "tags": [
+      "github",
+      "api-key",
+      "secrets"
+    ],
+    "examples": [
+      "site:github.com \"AWS_SECRET_KEY\"",
+      "site:github.com \"STRIPE_SECRET\""
+    ]
+  },
+  {
+    "id": "12",
+    "query": "inurl:\".git\" filetype:config",
+    "description": "Git configuration files",
+    "category": "git-repositories",
+    "platform": [
+      "generic"
+    ],
+    "assetType": "repository",
+    "noiseLevel": "low",
+    "tags": [
+      "git",
+      "config",
+      "repository"
+    ],
+    "examples": [
+      "inurl:\".git/config\"",
+      "inurl:\".git/HEAD\""
+    ]
+  },
+  {
+    "id": "115",
+    "query": "inurl:\"/.git/config\"",
+    "description": "Exposed Git configuration files",
+    "category": "git-repositories",
+    "platform": [
+      "generic"
+    ],
+    "assetType": "repository",
+    "noiseLevel": "low",
+    "tags": [
+      "git",
+      "config",
+      "repository"
+    ],
+    "examples": [
+      "inurl:\"/.git/HEAD\""
+    ]
+  }
+]

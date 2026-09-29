@@ -1,0 +1,206 @@
+[
+  {
+    "id": "19",
+    "query": "inurl:\"/robots.txt\" intext:\"Disallow: /\"",
+    "description": "Robots.txt files disallowing access to sensitive directories",
+    "category": "reconnaissance",
+    "platform": [
+      "generic"
+    ],
+    "assetType": "file",
+    "noiseLevel": "low",
+    "tags": [
+      "robots.txt",
+      "disallow",
+      "sensitive"
+    ],
+    "examples": [
+      "inurl:\"/robots.txt\" intext:\"Disallow: /admin\"",
+      "inurl:\"/robots.txt\" intext:\"Disallow: /private\""
+    ]
+  },
+  {
+    "id": "25",
+    "query": "inurl:\"/sitemap.xml\" filetype:xml",
+    "description": "Sitemap XML files revealing website structure",
+    "category": "reconnaissance",
+    "platform": [
+      "generic"
+    ],
+    "assetType": "file",
+    "noiseLevel": "low",
+    "tags": [
+      "sitemap",
+      "xml",
+      "recon"
+    ],
+    "examples": [
+      "inurl:\"/sitemap_index.xml\""
+    ]
+  },
+  {
+    "id": "84",
+    "query": "inurl:\"/search.php\" intext:\"search\"",
+    "description": "Generic search pages",
+    "category": "reconnaissance",
+    "platform": [
+      "generic"
+    ],
+    "assetType": "page",
+    "noiseLevel": "high",
+    "tags": [
+      "search",
+      "recon"
+    ],
+    "examples": [
+      "inurl:\"/search.php?q=\""
+    ]
+  },
+  {
+    "id": "85",
+    "query": "inurl:\"/download.php\" intext:\"download\"",
+    "description": "Generic download pages",
+    "category": "reconnaissance",
+    "platform": [
+      "generic"
+    ],
+    "assetType": "page",
+    "noiseLevel": "medium",
+    "tags": [
+      "download",
+      "recon"
+    ],
+    "examples": [
+      "inurl:\"/download.php?file=\""
+    ]
+  },
+  {
+    "id": "86",
+    "query": "inurl:\"/upload.php\" intext:\"upload\"",
+    "description": "Generic upload pages",
+    "category": "reconnaissance",
+    "platform": [
+      "generic"
+    ],
+    "assetType": "page",
+    "noiseLevel": "medium",
+    "tags": [
+      "upload",
+      "recon"
+    ],
+    "examples": [
+      "inurl:\"/upload.php\" intext:\"Choose file\""
+    ]
+  },
+  {
+    "id": "87",
+    "query": "inurl:\"/view.php\" intext:\"view\"",
+    "description": "Generic view pages",
+    "category": "reconnaissance",
+    "platform": [
+      "generic"
+    ],
+    "assetType": "page",
+    "noiseLevel": "medium",
+    "tags": [
+      "view",
+      "recon"
+    ],
+    "examples": [
+      "inurl:\"/view.php?id=\""
+    ]
+  },
+  {
+    "id": "88",
+    "query": "inurl:\"/edit.php\" intext:\"edit\"",
+    "description": "Generic edit pages",
+    "category": "reconnaissance",
+    "platform": [
+      "generic"
+    ],
+    "assetType": "page",
+    "noiseLevel": "medium",
+    "tags": [
+      "edit",
+      "recon"
+    ],
+    "examples": [
+      "inurl:\"/edit.php?id=\""
+    ]
+  },
+  {
+    "id": "89",
+    "query": "inurl:\"/delete.php\" intext:\"delete\"",
+    "description": "Generic delete pages",
+    "category": "reconnaissance",
+    "platform": [
+      "generic"
+    ],
+    "assetType": "page",
+    "noiseLevel": "medium",
+    "tags": [
+      "delete",
+      "recon"
+    ],
+    "examples": [
+      "inurl:\"/delete.php?id=\""
+    ]
+  },
+  {
+    "id": "91",
+    "query": "inurl:\"/user/\" intext:\"profile\"",
+    "description": "User profile pages",
+    "category": "reconnaissance",
+    "platform": [
+      "generic"
+    ],
+    "assetType": "page",
+    "noiseLevel": "medium",
+    "tags": [
+      "user",
+      "profile",
+      "recon"
+    ],
+    "examples": [
+      "inurl:\"/user/view.php?id=\""
+    ]
+  },
+  {
+    "id": "117",
+    "query": "inurl:\"/.DS_Store\" filetype:ds_store",
+    "description": "Exposed macOS .DS_Store files",
+    "category": "reconnaissance",
+    "platform": [
+      "generic"
+    ],
+    "assetType": "file",
+    "noiseLevel": "low",
+    "tags": [
+      "ds_store",
+      "macos",
+      "recon"
+    ],
+    "examples": [
+      "inurl:\"/.DS_Store\" intext:\"Icon\""
+    ]
+  },
+  {
+    "id": "136",
+    "query": "inurl:\"/robots.txt\" intext:\"Disallow: /admin\"",
+    "description": "Robots.txt files disallowing access to admin directories",
+    "category": "reconnaissance",
+    "platform": [
+      "generic"
+    ],
+    "assetType": "file",
+    "noiseLevel": "low",
+    "tags": [
+      "robots.txt",
+      "disallow",
+      "admin"
+    ],
+    "examples": [
+      "inurl:\"/robots.txt\" intext:\"Disallow: /private\""
+    ]
+  }
+]

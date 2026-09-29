@@ -1,0 +1,22 @@
+[
+  {
+    "id": "15",
+    "query": "inurl:\"/test/\" OR inurl:\"/dev/\" OR inurl:\"/staging/\"",
+    "description": "Test, development, or staging environments",
+    "category": "development-environments",
+    "platform": [
+      "generic"
+    ],
+    "assetType": "environment",
+    "noiseLevel": "high",
+    "tags": [
+      "test",
+      "dev",
+      "staging"
+    ],
+    "examples": [
+      "inurl:\"/test/index.php\"",
+      "inurl:\"/dev/login.html\""
+    ]
+  }
+]

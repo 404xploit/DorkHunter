@@ -1,0 +1,40 @@
+[
+  {
+    "id": "119",
+    "query": "inurl:\"/server-status\" intitle:\"Apache Status\"",
+    "description": "Exposed Apache server status pages",
+    "category": "server-info",
+    "platform": [
+      "generic"
+    ],
+    "assetType": "page",
+    "noiseLevel": "low",
+    "tags": [
+      "apache",
+      "server-status",
+      "info"
+    ],
+    "examples": [
+      "inurl:\"/server-info\" intitle:\"Apache Server Information\""
+    ]
+  },
+  {
+    "id": "120",
+    "query": "inurl:\"/nginx_status\" intitle:\"Nginx Status\"",
+    "description": "Exposed Nginx server status pages",
+    "category": "server-info",
+    "platform": [
+      "generic"
+    ],
+    "assetType": "page",
+    "noiseLevel": "low",
+    "tags": [
+      "nginx",
+      "server-status",
+      "info"
+    ],
+    "examples": [
+      "inurl:\"/stub_status\" intitle:\"Nginx stub_status\""
+    ]
+  }
+]

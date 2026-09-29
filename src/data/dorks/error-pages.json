@@ -1,0 +1,22 @@
+[
+  {
+    "id": "10",
+    "query": "filetype:log \"error\" \"exception\"",
+    "description": "Application error logs with exceptions",
+    "category": "error-pages",
+    "platform": [
+      "generic"
+    ],
+    "assetType": "file",
+    "noiseLevel": "high",
+    "tags": [
+      "logs",
+      "error",
+      "exception"
+    ],
+    "examples": [
+      "filetype:log \"stack trace\"",
+      "filetype:log \"fatal error\""
+    ]
+  }
+]

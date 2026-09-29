@@ -1,0 +1,380 @@
+[
+  {
+    "id": "2",
+    "query": "intitle:\"Index of\" \"admin\" \"config\"",
+    "description": "Exposed admin configuration directories",
+    "category": "admin-panels",
+    "platform": [
+      "generic"
+    ],
+    "assetType": "panel",
+    "noiseLevel": "medium",
+    "tags": [
+      "admin",
+      "config",
+      "directory-listing"
+    ],
+    "examples": [
+      "intitle:\"Index of /admin\"",
+      "intitle:\"Index of /config\""
+    ]
+  },
+  {
+    "id": "5",
+    "query": "inurl:wp-admin intitle:\"WordPress\"",
+    "description": "WordPress admin login pages",
+    "category": "admin-panels",
+    "platform": [
+      "generic"
+    ],
+    "assetType": "panel",
+    "noiseLevel": "high",
+    "tags": [
+      "wordpress",
+      "admin",
+      "login"
+    ],
+    "examples": [
+      "inurl:wp-login.php",
+      "intitle:\"Log In — WordPress\""
+    ]
+  },
+  {
+    "id": "9",
+    "query": "intitle:\"phpMyAdmin\" \"Welcome to phpMyAdmin\"",
+    "description": "phpMyAdmin database management interfaces",
+    "category": "admin-panels",
+    "platform": [
+      "generic"
+    ],
+    "assetType": "panel",
+    "noiseLevel": "low",
+    "tags": [
+      "phpmyadmin",
+      "database",
+      "mysql"
+    ],
+    "examples": [
+      "intitle:\"phpMyAdmin 4.8\"",
+      "intitle:\"phpMyAdmin 5.0\""
+    ]
+  },
+  {
+    "id": "13",
+    "query": "inurl:\"/admin/\" intitle:\"Login\"",
+    "description": "Admin login pages",
+    "category": "admin-panels",
+    "platform": [
+      "generic"
+    ],
+    "assetType": "panel",
+    "noiseLevel": "medium",
+    "tags": [
+      "admin",
+      "login"
+    ],
+    "examples": [
+      "inurl:\"/admin/login.php\"",
+      "intitle:\"Admin Panel Login\""
+    ]
+  },
+  {
+    "id": "16",
+    "query": "intitle:\"Dashboard\" inurl:\"/login\"",
+    "description": "Login pages for dashboards",
+    "category": "admin-panels",
+    "platform": [
+      "generic"
+    ],
+    "assetType": "panel",
+    "noiseLevel": "medium",
+    "tags": [
+      "dashboard",
+      "login"
+    ],
+    "examples": [
+      "intitle:\"Admin Dashboard\" inurl:\"/login\"",
+      "intitle:\"Control Panel\" inurl:\"/login\""
+    ]
+  },
+  {
+    "id": "21",
+    "query": "inurl:\"/admin/\" intext:\"Powered by\"",
+    "description": "Admin panels with platform identification",
+    "category": "admin-panels",
+    "platform": [
+      "generic"
+    ],
+    "assetType": "panel",
+    "noiseLevel": "medium",
+    "tags": [
+      "admin",
+      "powered-by"
+    ],
+    "examples": [
+      "inurl:\"/admin/\" intext:\"Powered by WordPress\""
+    ]
+  },
+  {
+    "id": "28",
+    "query": "inurl:\"/admin/\" intext:\"version\"",
+    "description": "Admin panels revealing software versions",
+    "category": "admin-panels",
+    "platform": [
+      "generic"
+    ],
+    "assetType": "panel",
+    "noiseLevel": "medium",
+    "tags": [
+      "admin",
+      "version",
+      "software"
+    ],
+    "examples": [
+      "inurl:\"/admin/\" intext:\"WordPress version\""
+    ]
+  },
+  {
+    "id": "73",
+    "query": "inurl:\"/admin/\" intext:\"Powered by Joomla\"",
+    "description": "Joomla admin panels",
+    "category": "admin-panels",
+    "platform": [
+      "joomla"
+    ],
+    "assetType": "panel",
+    "noiseLevel": "medium",
+    "tags": [
+      "joomla",
+      "admin",
+      "powered-by"
+    ],
+    "examples": [
+      "inurl:\"/administrator/\" intitle:\"Joomla! Administration\""
+    ]
+  },
+  {
+    "id": "77",
+    "query": "inurl:\"/cpanel/\" intitle:\"cPanel Login\"",
+    "description": "cPanel login pages",
+    "category": "admin-panels",
+    "platform": [
+      "generic"
+    ],
+    "assetType": "panel",
+    "noiseLevel": "medium",
+    "tags": [
+      "cpanel",
+      "admin",
+      "login"
+    ],
+    "examples": [
+      "inurl:\"/cpanel\" intitle:\"cPanel\""
+    ]
+  },
+  {
+    "id": "78",
+    "query": "inurl:\"/webmail/\" intitle:\"Webmail Login\"",
+    "description": "Webmail login pages",
+    "category": "admin-panels",
+    "platform": [
+      "generic"
+    ],
+    "assetType": "panel",
+    "noiseLevel": "medium",
+    "tags": [
+      "webmail",
+      "login"
+    ],
+    "examples": [
+      "inurl:\"/roundcube/\" intitle:\"Roundcube Webmail\""
+    ]
+  },
+  {
+    "id": "79",
+    "query": "inurl:\"/phpmyadmin/\" intitle:\"phpMyAdmin\"",
+    "description": "phpMyAdmin login pages",
+    "category": "admin-panels",
+    "platform": [
+      "generic"
+    ],
+    "assetType": "panel",
+    "noiseLevel": "low",
+    "tags": [
+      "phpmyadmin",
+      "database",
+      "login"
+    ],
+    "examples": [
+      "inurl:\"/phpmyadmin/index.php\""
+    ]
+  },
+  {
+    "id": "80",
+    "query": "inurl:\"/admin.php\" intitle:\"Admin Panel\"",
+    "description": "Generic admin panel login pages",
+    "category": "admin-panels",
+    "platform": [
+      "generic"
+    ],
+    "assetType": "panel",
+    "noiseLevel": "high",
+    "tags": [
+      "admin",
+      "login"
+    ],
+    "examples": [
+      "inurl:\"/admin.php\" intitle:\"Administration\""
+    ]
+  },
+  {
+    "id": "90",
+    "query": "inurl:\"/admin/\" intext:\"control panel\"",
+    "description": "Admin control panels",
+    "category": "admin-panels",
+    "platform": [
+      "generic"
+    ],
+    "assetType": "panel",
+    "noiseLevel": "medium",
+    "tags": [
+      "admin",
+      "control-panel"
+    ],
+    "examples": [
+      "inurl:\"/admin/\" intext:\"site administration\""
+    ]
+  },
+  {
+    "id": "95",
+    "query": "inurl:\"/admin/\" intext:\"dashboard\"",
+    "description": "Admin dashboards",
+    "category": "admin-panels",
+    "platform": [
+      "generic"
+    ],
+    "assetType": "panel",
+    "noiseLevel": "medium",
+    "tags": [
+      "admin",
+      "dashboard"
+    ],
+    "examples": [
+      "inurl:\"/admin/home.php\" intext:\"Welcome to the Dashboard\""
+    ]
+  },
+  {
+    "id": "121",
+    "query": "inurl:\"/jmx-console/\" intitle:\"JBoss JMX Management Console\"",
+    "description": "Exposed JBoss JMX Management Consoles",
+    "category": "admin-panels",
+    "platform": [
+      "jboss"
+    ],
+    "assetType": "panel",
+    "noiseLevel": "low",
+    "tags": [
+      "jboss",
+      "jmx-console",
+      "admin"
+    ],
+    "examples": [
+      "inurl:\"/web-console/\" intitle:\"JBoss Web Console\""
+    ]
+  },
+  {
+    "id": "122",
+    "query": "inurl:\"/axis2/axis2-admin/\" intitle:\"Apache Axis2 Administration Console\"",
+    "description": "Exposed Apache Axis2 Administration Consoles",
+    "category": "admin-panels",
+    "platform": [
+      "generic"
+    ],
+    "assetType": "panel",
+    "noiseLevel": "low",
+    "tags": [
+      "axis2",
+      "admin-console",
+      "apache"
+    ],
+    "examples": [
+      "inurl:\"/axis2-admin/login\""
+    ]
+  },
+  {
+    "id": "123",
+    "query": "inurl:\"/manager/html\" intitle:\"Tomcat Web Application Manager\"",
+    "description": "Exposed Tomcat Web Application Manager interfaces",
+    "category": "admin-panels",
+    "platform": [
+      "tomcat"
+    ],
+    "assetType": "panel",
+    "noiseLevel": "low",
+    "tags": [
+      "tomcat",
+      "manager",
+      "admin"
+    ],
+    "examples": [
+      "inurl:\"/host-manager/html\" intitle:\"Tomcat Virtual Host Manager\""
+    ]
+  },
+  {
+    "id": "124",
+    "query": "inurl:\"/solr/\" intitle:\"Solr Admin\"",
+    "description": "Exposed Solr admin interfaces",
+    "category": "admin-panels",
+    "platform": [
+      "solr"
+    ],
+    "assetType": "panel",
+    "noiseLevel": "low",
+    "tags": [
+      "solr",
+      "admin",
+      "search"
+    ],
+    "examples": [
+      "inurl:\"/solr/#/\""
+    ]
+  },
+  {
+    "id": "125",
+    "query": "inurl:\"/_plugin/head/\" intitle:\"Elasticsearch Head\"",
+    "description": "Exposed Elasticsearch Head plugin interfaces",
+    "category": "admin-panels",
+    "platform": [
+      "elasticsearch"
+    ],
+    "assetType": "panel",
+    "noiseLevel": "low",
+    "tags": [
+      "elasticsearch",
+      "head",
+      "admin"
+    ],
+    "examples": [
+      "inurl:\"/_plugin/kopf/\" intitle:\"Kopf - Elasticsearch Admin\""
+    ]
+  },
+  {
+    "id": "187",
+    "query": "intitle:\"Kubernetes Dashboard\" inurl:\"/#/login\"",
+    "description": "Public Kubernetes Dashboard login interfaces",
+    "category": "admin-panels",
+    "platform": [
+      "kubernetes"
+    ],
+    "assetType": "panel",
+    "noiseLevel": "low",
+    "tags": [
+      "kubernetes",
+      "dashboard",
+      "admin"
+    ],
+    "examples": [
+      "intitle:\"Kubernetes Dashboard\" inurl:\"/#/workloads\""
+    ]
+  }
+]

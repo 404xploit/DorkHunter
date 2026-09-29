@@ -1,0 +1,21 @@
+[
+  {
+    "id": "129",
+    "query": "inurl:\"/confluence/\" intitle:\"Confluence\"",
+    "description": "Exposed Confluence instances",
+    "category": "documentation",
+    "platform": [
+      "confluence"
+    ],
+    "assetType": "server",
+    "noiseLevel": "low",
+    "tags": [
+      "confluence",
+      "documentation",
+      "atlassian"
+    ],
+    "examples": [
+      "inurl:\"/display/\" intitle:\"Confluence\""
+    ]
+  }
+]

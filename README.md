@@ -1,93 +1,104 @@
-# 🔍 DorkHunter - Google Dork Platform for Bug Bounty
+# DorkHunter
 
-<img src="https://github.com/404xploit/DorkHunter/blob/main/DorkHunter.png?raw=true" width="400" alt="DorkHunter Logo" />
+DorkHunter is a local React and TypeScript application for browsing, organizing, and experimenting with Google dork queries used during authorized bug bounty research.
 
-A powerful local web platform for security researchers to discover vulnerabilities using Google Dork queries.
+> Use the queries only against assets you own or are explicitly authorized to test. DorkHunter does not bypass access controls or grant permission to inspect third-party systems.
 
+![DorkHunter interface](DorkHunter2.png)
 
-[![Node.js](https://img.shields.io/badge/node.js-14%2B-brightgreen?style=flat-square&logo=node.js)](https://nodejs.org/)
-[![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
-[![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+## What is included
 
----
+- **105 unique dorks** grouped into 22 category files.
+- Queries for admin panels, exposed configuration, APIs, cloud storage, DevOps tools, WordPress, and other reconnaissance targets.
+- Typed metadata for category, platform, asset type, noise level, tags, and examples.
+- Saved-query and export flows for JSON, CSV, and Markdown.
+- Automated catalog validation, unit tests, linting, and production builds.
+- GitHub Actions quality gates for pushes and pull requests.
 
-## ✨ Features
+The current search-results screen uses deterministic demonstration data. It does **not** call Google or another live search API. The catalog itself contains the real queries and can be copied for authorized use.
 
-### Extensive Dork Database
-- **100+ pre-built Google Dork queries** (and growing!)
-- Categorized by vulnerability type and target
+## Requirements
 
-### 🔎 Smart Search Tools
-- Save and organize custom dork queries
-- Import and analyze search results
-- Live search with instant feedback
+- Node.js 22.12.0 or newer
+- npm
 
-### 🎯 Bug Bounty Optimized
-- Specialized dorks for:
-  - HackerOne disclosed reports
-  - Sensitive file exposure
-  - Admin panel discovery
-  - Common CVEs and misconfigurations
+## Quick start
 
-### Personal Dashboard
-- Track your search history
-- Manage saved queries
-- Visualize your findings
-
----
-
-
-
-<img src="https://github.com/404xploit/DorkHunter/blob/main/DorkHunter2.png?raw=true" width="1400" alt="Main Interface" />
-
----
-
-## Quick Start
-
-### Prerequisites
-- Node.js (v14+ recommended)
-- npm (comes with Node.js)
-
-### Installation
 ```bash
 git clone https://github.com/404xploit/DorkHunter.git
 cd DorkHunter
-npm install
-```
-
-### Running the Application
-```bash
+npm ci
 npm run dev
 ```
-Then open your browser to:
+
+Vite prints the local URL when it starts; by default it is <http://localhost:5173>.
+
+## Quality commands
+
+| Command | Purpose |
+| --- | --- |
+| `npm run validate:dorks` | Validate every catalog file and reject malformed or duplicate records |
+| `npm test` | Run the validator unit tests once |
+| `npm run test:watch` | Run tests interactively during development |
+| `npm run lint` | Run ESLint across the codebase |
+| `npm run typecheck` | Run the TypeScript compiler without emitting files |
+| `npm run build` | Type-check and build the production bundle |
+| `npm run check` | Run all quality gates in CI order |
+
+## Catalog structure
+
+Catalog entries live in `src/data/dorks/`, with one JSON file per category:
+
+```text
+src/data/dorks/
+├── admin-panels.json
+├── api-endpoints.json
+├── cloud-storage.json
+├── config-files.json
+└── ...
 ```
-http://localhost:3000
+
+Each entry follows this shape:
+
+```json
+{
+  "id": "184",
+  "query": "inurl:\"/v3/api-docs\" OR inurl:\"/openapi.json\"",
+  "description": "Exposed OpenAPI specification documents",
+  "category": "api-endpoints",
+  "platform": ["generic"],
+  "assetType": "documentation",
+  "noiseLevel": "low",
+  "tags": ["openapi", "swagger", "api-docs"],
+  "examples": ["inurl:\"/swagger.json\" filetype:json"]
+}
 ```
 
----
+The validator enforces:
 
-## 🧠 Example Dork Queries
+- unique positive numeric IDs;
+- IDs that fit safely in JavaScript's integer range;
+- unique queries after case and whitespace normalization;
+- required fields and supported enum values;
+- category/file-name consistency;
+- sorted IDs within each file;
+- non-empty arrays without repeated values;
+- balanced query/example quotes;
+- lowercase URL-safe tags;
+- a minimum catalog size of 100 entries.
+- every supported category file present and non-empty.
 
-```plaintext
-intitle:"Index of" admin
-filetype:sql password
-inurl:wp-content/uploads site:*.edu
-"HackerOne disclosed report" site:hackerone.com
-```
+Run `npm run validate:dorks` before submitting a catalog change.
 
----
+## Continuous integration
 
-## 🤝 How to Contribute
+The workflow in `.github/workflows/ci.yml` runs on every pull request and every push to `main`. It installs dependencies with `npm ci` and executes `npm run check`, covering validation, tests, ESLint, and the production build.
 
-We welcome contributions! Here's how you can help:
+## Contributing
 
-1. **Add New Dorks** (submit your best Google Dork queries)
-2. **Improve UI/UX** (make it prettier or more intuitive)
-3. **Fix Bugs** (help squash those pesky issues)
-4. **Enhance Features** (got a cool idea? share it!)
+1. Add or update entries in the appropriate category JSON file.
+2. Keep IDs sorted and do not reuse an existing ID.
+3. Run `npm run check`.
+4. Open a pull request describing the query source and intended authorized use.
 
----
-
-## 💙 Credits
-
-Created by [404xploit](https://github.com/404xploit)  
+Created by [404xploit](https://github.com/404xploit).

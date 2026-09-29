@@ -1,0 +1,75 @@
+[
+  {
+    "id": "81",
+    "query": "inurl:\"/login.php\" intitle:\"Login\"",
+    "description": "Generic login pages",
+    "category": "authentication",
+    "platform": [
+      "generic"
+    ],
+    "assetType": "page",
+    "noiseLevel": "high",
+    "tags": [
+      "login",
+      "authentication"
+    ],
+    "examples": [
+      "inurl:\"/login.php\" intitle:\"User Login\""
+    ]
+  },
+  {
+    "id": "82",
+    "query": "inurl:\"/register.php\" intitle:\"Register\"",
+    "description": "Generic registration pages",
+    "category": "authentication",
+    "platform": [
+      "generic"
+    ],
+    "assetType": "page",
+    "noiseLevel": "medium",
+    "tags": [
+      "register",
+      "authentication"
+    ],
+    "examples": [
+      "inurl:\"/signup.php\" intitle:\"Sign Up\""
+    ]
+  },
+  {
+    "id": "83",
+    "query": "inurl:\"/forgot.php\" intitle:\"Forgot Password\"",
+    "description": "Generic forgot password pages",
+    "category": "authentication",
+    "platform": [
+      "generic"
+    ],
+    "assetType": "page",
+    "noiseLevel": "medium",
+    "tags": [
+      "forgot-password",
+      "authentication"
+    ],
+    "examples": [
+      "inurl:\"/reset.php\" intitle:\"Password Reset\""
+    ]
+  },
+  {
+    "id": "96",
+    "query": "inurl:\"/login\" intext:\"username\" intext:\"password\"",
+    "description": "Login pages with username and password fields",
+    "category": "authentication",
+    "platform": [
+      "generic"
+    ],
+    "assetType": "page",
+    "noiseLevel": "high",
+    "tags": [
+      "login",
+      "username",
+      "password"
+    ],
+    "examples": [
+      "inurl:\"/signin\" intext:\"email\" intext:\"password\""
+    ]
+  }
+]

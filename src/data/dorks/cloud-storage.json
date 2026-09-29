@@ -1,0 +1,80 @@
+[
+  {
+    "id": "7",
+    "query": "site:s3.amazonaws.com filetype:pdf",
+    "description": "PDF files in public S3 buckets",
+    "category": "cloud-storage",
+    "platform": [
+      "generic"
+    ],
+    "assetType": "storage",
+    "noiseLevel": "medium",
+    "tags": [
+      "s3",
+      "aws",
+      "pdf",
+      "bucket"
+    ],
+    "examples": [
+      "site:s3.amazonaws.com filetype:xlsx",
+      "site:s3.amazonaws.com filetype:doc"
+    ]
+  },
+  {
+    "id": "188",
+    "query": "site:blob.core.windows.net filetype:sql OR filetype:bak",
+    "description": "Database backups in public Azure Blob Storage",
+    "category": "cloud-storage",
+    "platform": [
+      "azure"
+    ],
+    "assetType": "storage",
+    "noiseLevel": "medium",
+    "tags": [
+      "azure",
+      "blob-storage",
+      "backup"
+    ],
+    "examples": [
+      "site:blob.core.windows.net filetype:env"
+    ]
+  },
+  {
+    "id": "189",
+    "query": "site:storage.googleapis.com filetype:env OR filetype:json",
+    "description": "Configuration files in public Google Cloud Storage buckets",
+    "category": "cloud-storage",
+    "platform": [
+      "gcp"
+    ],
+    "assetType": "storage",
+    "noiseLevel": "medium",
+    "tags": [
+      "gcp",
+      "cloud-storage",
+      "configuration"
+    ],
+    "examples": [
+      "site:storage.googleapis.com filetype:sql"
+    ]
+  },
+  {
+    "id": "190",
+    "query": "inurl:\"firebaseio.com\" filetype:json",
+    "description": "Public Firebase Realtime Database JSON endpoints",
+    "category": "cloud-storage",
+    "platform": [
+      "firebase"
+    ],
+    "assetType": "endpoint",
+    "noiseLevel": "medium",
+    "tags": [
+      "firebase",
+      "database",
+      "json"
+    ],
+    "examples": [
+      "site:firebaseio.com \"users\""
+    ]
+  }
+]

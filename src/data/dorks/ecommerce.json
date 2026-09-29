@@ -1,0 +1,78 @@
+[
+  {
+    "id": "75",
+    "query": "inurl:\"/opencart/admin/\" intitle:\"OpenCart Administration\"",
+    "description": "OpenCart admin panels",
+    "category": "ecommerce",
+    "platform": [
+      "opencart"
+    ],
+    "assetType": "panel",
+    "noiseLevel": "medium",
+    "tags": [
+      "opencart",
+      "admin",
+      "ecommerce"
+    ],
+    "examples": [
+      "inurl:\"/admin/index.php\" intitle:\"OpenCart\""
+    ]
+  },
+  {
+    "id": "76",
+    "query": "inurl:\"/magento/admin/\" intitle:\"Magento Admin\"",
+    "description": "Magento admin panels",
+    "category": "ecommerce",
+    "platform": [
+      "magento"
+    ],
+    "assetType": "panel",
+    "noiseLevel": "medium",
+    "tags": [
+      "magento",
+      "admin",
+      "ecommerce"
+    ],
+    "examples": [
+      "inurl:\"/admin/dashboard/\" intitle:\"Magento\""
+    ]
+  },
+  {
+    "id": "103",
+    "query": "inurl:\"/admin/\" intext:\"Powered by OpenCart\"",
+    "description": "OpenCart admin panels",
+    "category": "ecommerce",
+    "platform": [
+      "opencart"
+    ],
+    "assetType": "panel",
+    "noiseLevel": "medium",
+    "tags": [
+      "opencart",
+      "admin",
+      "powered-by"
+    ],
+    "examples": [
+      "inurl:\"/admin/index.php\" intext:\"OpenCart\""
+    ]
+  },
+  {
+    "id": "104",
+    "query": "inurl:\"/admin/\" intext:\"Powered by Magento\"",
+    "description": "Magento admin panels",
+    "category": "ecommerce",
+    "platform": [
+      "magento"
+    ],
+    "assetType": "panel",
+    "noiseLevel": "medium",
+    "tags": [
+      "magento",
+      "admin",
+      "powered-by"
+    ],
+    "examples": [
+      "inurl:\"/admin/dashboard/\" intext:\"Magento\""
+    ]
+  }
+]

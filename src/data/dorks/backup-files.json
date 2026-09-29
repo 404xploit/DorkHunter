@@ -1,0 +1,23 @@
+[
+  {
+    "id": "14",
+    "query": "inurl:\"/backup/\" OR inurl:\"/old/\" filetype:zip OR filetype:tar.gz",
+    "description": "Backup files or old versions of websites",
+    "category": "backup-files",
+    "platform": [
+      "generic"
+    ],
+    "assetType": "file",
+    "noiseLevel": "medium",
+    "tags": [
+      "backup",
+      "old",
+      "zip",
+      "tar.gz"
+    ],
+    "examples": [
+      "inurl:\"/backup/website.zip\"",
+      "inurl:\"/old/site.tar.gz\""
+    ]
+  }
+]

@@ -1,0 +1,246 @@
+[
+  {
+    "id": "22",
+    "query": "inurl:\"/wp-content/uploads/\" filetype:zip OR filetype:rar",
+    "description": "WordPress uploaded files containing archives",
+    "category": "wordpress",
+    "platform": [
+      "wordpress"
+    ],
+    "assetType": "file",
+    "noiseLevel": "medium",
+    "tags": [
+      "wordpress",
+      "uploads",
+      "zip",
+      "rar"
+    ],
+    "examples": [
+      "inurl:\"/wp-content/uploads/2023/\" filetype:zip"
+    ]
+  },
+  {
+    "id": "29",
+    "query": "inurl:\"/wp-config.php.bak\" OR inurl:\"/wp-config.php.old\"",
+    "description": "Backup files of WordPress configuration",
+    "category": "wordpress",
+    "platform": [
+      "wordpress"
+    ],
+    "assetType": "file",
+    "noiseLevel": "low",
+    "tags": [
+      "wordpress",
+      "config",
+      "backup"
+    ],
+    "examples": [
+      "inurl:\"/wp-config.php.orig\""
+    ]
+  },
+  {
+    "id": "30",
+    "query": "inurl:\"/wp-content/debug.log\"",
+    "description": "WordPress debug log files",
+    "category": "wordpress",
+    "platform": [
+      "wordpress"
+    ],
+    "assetType": "file",
+    "noiseLevel": "low",
+    "tags": [
+      "wordpress",
+      "debug",
+      "logs"
+    ],
+    "examples": [
+      "inurl:\"/wp-content/debug.log\" intext:\"error\""
+    ]
+  },
+  {
+    "id": "31",
+    "query": "inurl:\"/wp-content/plugins/\" intext:\"readme.txt\"",
+    "description": "WordPress plugin readme files revealing versions",
+    "category": "wordpress",
+    "platform": [
+      "wordpress"
+    ],
+    "assetType": "file",
+    "noiseLevel": "medium",
+    "tags": [
+      "wordpress",
+      "plugins",
+      "versions"
+    ],
+    "examples": [
+      "inurl:\"/wp-content/plugins/akismet/readme.txt\""
+    ]
+  },
+  {
+    "id": "105",
+    "query": "inurl:\"/wp-content/plugins/\" intext:\"changelog.txt\"",
+    "description": "WordPress plugin changelog files",
+    "category": "wordpress",
+    "platform": [
+      "wordpress"
+    ],
+    "assetType": "file",
+    "noiseLevel": "low",
+    "tags": [
+      "wordpress",
+      "plugins",
+      "changelog"
+    ],
+    "examples": [
+      "inurl:\"/wp-content/plugins/woocommerce/changelog.txt\""
+    ]
+  },
+  {
+    "id": "106",
+    "query": "inurl:\"/wp-content/themes/\" intext:\"style.css\"",
+    "description": "WordPress theme style.css files revealing theme info",
+    "category": "wordpress",
+    "platform": [
+      "wordpress"
+    ],
+    "assetType": "file",
+    "noiseLevel": "medium",
+    "tags": [
+      "wordpress",
+      "themes",
+      "style.css"
+    ],
+    "examples": [
+      "inurl:\"/wp-content/themes/twentytwentyfour/style.css\""
+    ]
+  },
+  {
+    "id": "107",
+    "query": "inurl:\"/wp-json/wp/v2/users\"",
+    "description": "WordPress REST API endpoint for users",
+    "category": "wordpress",
+    "platform": [
+      "wordpress"
+    ],
+    "assetType": "endpoint",
+    "noiseLevel": "low",
+    "tags": [
+      "wordpress",
+      "rest-api",
+      "users"
+    ],
+    "examples": [
+      "inurl:\"/wp-json/wp/v2/posts\""
+    ]
+  },
+  {
+    "id": "108",
+    "query": "inurl:\"/wp-json/oembed/1.0/embed\"",
+    "description": "WordPress oEmbed endpoint",
+    "category": "wordpress",
+    "platform": [
+      "wordpress"
+    ],
+    "assetType": "endpoint",
+    "noiseLevel": "low",
+    "tags": [
+      "wordpress",
+      "oembed"
+    ],
+    "examples": [
+      "inurl:\"/wp-json/oembed/1.0/proxy\""
+    ]
+  },
+  {
+    "id": "109",
+    "query": "inurl:\"/wp-includes/\" intext:\"version\"",
+    "description": "WordPress includes directory revealing version",
+    "category": "wordpress",
+    "platform": [
+      "wordpress"
+    ],
+    "assetType": "file",
+    "noiseLevel": "low",
+    "tags": [
+      "wordpress",
+      "version"
+    ],
+    "examples": [
+      "inurl:\"/wp-includes/version.php\""
+    ]
+  },
+  {
+    "id": "110",
+    "query": "inurl:\"/wp-admin/admin-ajax.php\"",
+    "description": "WordPress admin-ajax.php endpoint",
+    "category": "wordpress",
+    "platform": [
+      "wordpress"
+    ],
+    "assetType": "endpoint",
+    "noiseLevel": "medium",
+    "tags": [
+      "wordpress",
+      "ajax"
+    ],
+    "examples": [
+      "inurl:\"/wp-admin/admin-post.php\""
+    ]
+  },
+  {
+    "id": "111",
+    "query": "inurl:\"/xmlrpc.php\"",
+    "description": "WordPress XML-RPC endpoint",
+    "category": "wordpress",
+    "platform": [
+      "wordpress"
+    ],
+    "assetType": "endpoint",
+    "noiseLevel": "low",
+    "tags": [
+      "wordpress",
+      "xmlrpc"
+    ],
+    "examples": [
+      "inurl:\"/xmlrpc.php\" intext:\"XML-RPC server accepts POST requests only.\""
+    ]
+  },
+  {
+    "id": "112",
+    "query": "inurl:\"/wp-login.php\" intext:\"Error: Invalid username.\"",
+    "description": "WordPress login page with error messages",
+    "category": "wordpress",
+    "platform": [
+      "wordpress"
+    ],
+    "assetType": "page",
+    "noiseLevel": "low",
+    "tags": [
+      "wordpress",
+      "login",
+      "error"
+    ],
+    "examples": [
+      "inurl:\"/wp-login.php\" intext:\"Error: The password you entered for the username is incorrect.\""
+    ]
+  },
+  {
+    "id": "113",
+    "query": "inurl:\"/wp-content/uploads/\" intext:\"private\"",
+    "description": "WordPress uploaded files with sensitive content",
+    "category": "wordpress",
+    "platform": [
+      "wordpress"
+    ],
+    "assetType": "file",
+    "noiseLevel": "medium",
+    "tags": [
+      "wordpress",
+      "uploads",
+      "private"
+    ],
+    "examples": [
+      "inurl:\"/wp-content/uploads/\" intext:\"confidential\""
+    ]
+  }
+]

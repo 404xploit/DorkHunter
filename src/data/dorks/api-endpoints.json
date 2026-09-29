@@ -1,0 +1,117 @@
+[
+  {
+    "id": "8",
+    "query": "inurl:\"/api/v1/\" OR inurl:\"/api/v2/\"",
+    "description": "API endpoints version 1 and 2",
+    "category": "api-endpoints",
+    "platform": [
+      "generic"
+    ],
+    "assetType": "endpoint",
+    "noiseLevel": "medium",
+    "tags": [
+      "api",
+      "endpoint",
+      "version"
+    ],
+    "examples": [
+      "inurl:\"/api/users\"",
+      "inurl:\"/api/auth\""
+    ]
+  },
+  {
+    "id": "27",
+    "query": "inurl:\"/swagger-ui.html\" OR inurl:\"/api-docs\"",
+    "description": "Swagger/OpenAPI documentation pages",
+    "category": "api-endpoints",
+    "platform": [
+      "generic"
+    ],
+    "assetType": "documentation",
+    "noiseLevel": "low",
+    "tags": [
+      "swagger",
+      "openapi",
+      "api-docs"
+    ],
+    "examples": [
+      "inurl:\"/swagger/index.html\"",
+      "inurl:\"/v2/api-docs\""
+    ]
+  },
+  {
+    "id": "92",
+    "query": "inurl:\"/api/\" intext:\"swagger\"",
+    "description": "API documentation with Swagger",
+    "category": "api-endpoints",
+    "platform": [
+      "generic"
+    ],
+    "assetType": "documentation",
+    "noiseLevel": "low",
+    "tags": [
+      "api",
+      "swagger",
+      "documentation"
+    ],
+    "examples": [
+      "inurl:\"/api/v1/swagger-ui.html\""
+    ]
+  },
+  {
+    "id": "93",
+    "query": "inurl:\"/docs/\" intext:\"api documentation\"",
+    "description": "Generic API documentation pages",
+    "category": "api-endpoints",
+    "platform": [
+      "generic"
+    ],
+    "assetType": "documentation",
+    "noiseLevel": "low",
+    "tags": [
+      "api",
+      "documentation"
+    ],
+    "examples": [
+      "inurl:\"/docs/api.html\""
+    ]
+  },
+  {
+    "id": "184",
+    "query": "inurl:\"/v3/api-docs\" OR inurl:\"/openapi.json\"",
+    "description": "Exposed OpenAPI specification documents",
+    "category": "api-endpoints",
+    "platform": [
+      "generic"
+    ],
+    "assetType": "documentation",
+    "noiseLevel": "low",
+    "tags": [
+      "openapi",
+      "swagger",
+      "api-docs"
+    ],
+    "examples": [
+      "inurl:\"/swagger.json\" filetype:json"
+    ]
+  },
+  {
+    "id": "185",
+    "query": "inurl:\"/graphql\" intitle:\"GraphQL Playground\"",
+    "description": "Public GraphQL playground interfaces",
+    "category": "api-endpoints",
+    "platform": [
+      "generic"
+    ],
+    "assetType": "endpoint",
+    "noiseLevel": "medium",
+    "tags": [
+      "graphql",
+      "playground",
+      "api"
+    ],
+    "examples": [
+      "inurl:\"/graphiql\" intitle:\"GraphiQL\""
+    ]
+  }
+]
